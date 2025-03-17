@@ -40,7 +40,7 @@ function Hero() {
             <p className="mt-2 text-gray-600">
               Access personalized courses and track progress.
             </p>
-            <Link href={"/student-dashboard"}>
+            <Link href={"https://next-gen-smart-course-generator.vercel.app/"}>
               <Button className="mt-4">Get Started</Button>
             </Link>
           </div>
@@ -53,7 +53,11 @@ function Hero() {
             <p className="mt-2 text-gray-600">
               Prepare for interviews with AI-driven mock tests.
             </p>
-            <Link href={'https://mock-xpert-ai-interview.vercel.app/sign-in?redirect_url=https%3A%2F%2Fmock-xpert-ai-interview.vercel.app%2Fdashboard'}>
+            <Link
+              href={
+                "https://mock-xpert-ai-interview.vercel.app/sign-in?redirect_url=https%3A%2F%2Fmock-xpert-ai-interview.vercel.app%2Fdashboard"
+              }
+            >
               <Button className="mt-4">Get Started</Button>
             </Link>
           </div>
