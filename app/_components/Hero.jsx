@@ -2,7 +2,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { BookOpen, User, Briefcase, ThumbsUp, Sparkles, ShieldCheck } from "lucide-react";
+import {
+  BookOpen,
+  User,
+  Briefcase,
+  ThumbsUp,
+  Sparkles,
+  ShieldCheck,
+} from "lucide-react";
 import HowItWorks from "./HowItWorks";
 import Footer from "./footer";
 
@@ -16,7 +23,8 @@ function Hero() {
           transition={{ duration: 0.6 }}
           className="text-5xl sm:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight"
         >
-          Transform Your Learning Experience with <span className="text-[#274DF0]">AI</span>
+          Transform Your Learning Experience with{" "}
+          <span className="text-[#274DF0]">AI</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -24,7 +32,8 @@ function Hero() {
           transition={{ delay: 0.4 }}
           className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto"
         >
-          Explore our smart dashboards tailored for Educators, Students, and Job Seekers.
+          Explore our smart dashboards tailored for Educators, Students, and Job
+          Seekers.
         </motion.p>
 
         {/* 🚀 Feature Cards with Animation */}
@@ -91,26 +100,32 @@ function WhyChooseUs() {
     {
       icon: <ThumbsUp className="w-8 h-8 text-[#274DF0]" />,
       title: "User-Friendly Design",
-      description: "Clean, intuitive dashboards for every user role with smooth navigation.",
+      description:
+        "Clean, intuitive dashboards for every user role with smooth navigation.",
     },
     {
       icon: <Sparkles className="w-8 h-8 text-[#274DF0]" />,
       title: "AI-Powered Efficiency",
-      description: "Get smarter recommendations, automatic assessments, and adaptive learning paths.",
+      description:
+        "Get smarter recommendations, automatic assessments, and adaptive learning paths.",
     },
     {
       icon: <ShieldCheck className="w-8 h-8 text-[#274DF0]" />,
       title: "Secure & Reliable",
-      description: "Your data is encrypted, protected, and handled with utmost privacy standards.",
+      description:
+        "Your data is encrypted, protected, and handled with utmost privacy standards.",
     },
   ];
 
   return (
     <section className="mt-16 bg-gradient-to-b from-white to-[#EAF0FF] py-20">
       <div className="text-center px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Why Choose Us?</h2>
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+          Why Choose Us?
+        </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          We’re not just another AI platform. We’re your partner in smarter learning, career prep, and seamless teaching.
+          We’re not just another AI platform. We’re your partner in smarter
+          learning, career prep, and seamless teaching.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -123,21 +138,18 @@ function WhyChooseUs() {
               className="p-6 rounded-xl bg-white shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300"
             >
               <div className="mb-3 flex justify-center">{perk.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800">{perk.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-800">
+                {perk.title}
+              </h3>
               <p className="mt-2 text-gray-600">{perk.description}</p>
             </motion.div>
           ))}
         </div>
-        
       </div>
-    
     </section>
   );
 }
 
 // 👇 Footer Component
 
-
 export default Hero;
-
-
