@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <div className="flex justify-between p-5 shadow-sm">
-      <Image src={"/next.svg"} width={100} height={100} alt="image" priority />
+      <Image src={"/next.png"} width={180} height={80} alt="image" priority />
 
       <Link href="https://ai-educator-course-gen.vercel.app/" passHref>
         <Button className="mt-2">Get Started</Button>

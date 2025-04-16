@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section className="bg-gray-50">
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:flex-col lg:items-center">
-        <h1 className="text-3xl text-primary font-extrabold sm:text-5xl text-center">
+        <h1 className="text-3xl text-[#B100FF] font-extrabold sm:text-5xl text-center">
           AI-Powered Personalized Learning tools
           <strong className="font-bold text-gray-950 text-5xl sm:block">
             {" "}
@@ -28,7 +28,7 @@ function Hero() {
               Create custom learning paths using Gen AI.
             </p>
             <Link href={"/dashboard"}>
-              <Button className="mt-4">Get Started</Button>
+              <Button className="mt-4 ">Get Started</Button>
             </Link>
           </div>
 
@@ -40,7 +40,7 @@ function Hero() {
             <p className="mt-2 text-gray-600">
               Access personalized courses and track progress.
             </p>
-            <Link href={"https://next-gen-smart-course-generator.vercel.app/"}>
+            <Link href={"https://next-gen-smart-course-generator.vercel.app/dashboard"}>
               <Button className="mt-4">Get Started</Button>
             </Link>
           </div>

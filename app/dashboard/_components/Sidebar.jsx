@@ -40,8 +40,15 @@ function Sidebar() {
   const path = usePathname();
   return (
     <div className="fixed h-full md:w-64 p-5 shadow-md">
-      <Image src={"/next.svg"} width={120} height={60} alt="imagee" />
-      <hr className="my-5" />
+<Link href="https://ai-educator-course-gen.vercel.app/">
+  <Image
+    src="/next.png"
+    width={170}
+    height={100}
+    alt="imagee"
+    className="cursor-pointer"
+  />
+</Link>      <hr className="my-5" />
 
       <ul>
         {Menu.map((item, index) => (
