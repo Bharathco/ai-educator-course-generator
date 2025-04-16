@@ -11,7 +11,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import HowItWorks from "./HowItWorks";
-import Footer from "./footer";
+
 
 function Hero() {
   return (
