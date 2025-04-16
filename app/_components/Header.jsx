@@ -14,7 +14,7 @@ function Header() {
   if (!isClient) return null; // Prevents SSR rendering
 
   return (
-    <div className="flex justify-between p-5 shadow-sm">
+    <div className="flex justify-between p-2 shadow-sm">
       <Image src={"/next.png"} width={180} height={80} alt="image" priority />
 
       <Link href="https://ai-educator-course-gen.vercel.app/" passHref>
