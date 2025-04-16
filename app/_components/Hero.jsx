@@ -7,7 +7,7 @@ function Hero() {
     <section className="bg-gray-50">
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:flex-col lg:items-center">
         <h1 className="text-3xl text-primary font-extrabold sm:text-5xl text-center">
-          AI-Powered Dashboards
+          AI-Powered Personalized Learning tools
           <strong className="font-bold text-gray-950 text-5xl sm:block">
             {" "}
             Enhance Learning & Interview Prep
@@ -55,7 +55,7 @@ function Hero() {
             </p>
             <Link
               href={
-                "https://mock-xpert-ai-interview.vercel.app/sign-in?redirect_url=https%3A%2F%2Fmock-xpert-ai-interview.vercel.app%2Fdashboard"
+                "https://ai-mock-interviews-nu.vercel.app/"
               }
             >
               <Button className="mt-4">Get Started</Button>

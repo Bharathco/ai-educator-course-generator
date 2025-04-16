@@ -5,6 +5,7 @@ import { and, eq } from "drizzle-orm";
 import React, { useEffect, useState } from "react";
 import ChapterListCard from "./_components/ChapterListCard";
 import ChapterContent from "./_components/ChapterContent";
+import { HiOutlineClipboardDocumentCheck } from "react-icons/hi2";
 
 function CourseStart({ params }) {
   const [course, setCourse] = useState();
@@ -22,11 +23,11 @@ function CourseStart({ params }) {
    */
   const GetCourse = async () => {
     try {
-      const courseParams = await params; // Ensure params is awaited
+      const courseParams = await params;
       const result = await db
         .select()
         .from(CourseList)
-        .where(eq(CourseList?.courseId, courseParams?.courseId)); // Access safely
+        .where(eq(CourseList?.courseId, courseParams?.courseId));
 
       setCourse(result[0]);
     } catch (error) {
@@ -66,12 +67,9 @@ function CourseStart({ params }) {
           {course?.courseOutput?.course?.chapters?.map((chapter, index) => (
             <div
               key={index}
-              className={`cursor-pointer hover:bg-purple-50
-                            ${
-                              selectedChapter?.name === chapter?.name &&
-                              "bg-purple-100"
-                            }
-                        `}
+              className={`cursor-pointer hover:bg-purple-50 ${
+                selectedChapter?.name === chapter?.name && "bg-purple-100"
+              }`}
               onClick={() => {
                 setSelectedChapter(chapter);
                 GetSelectedChapterContent(index);
@@ -81,7 +79,25 @@ function CourseStart({ params }) {
             </div>
           ))}
         </div>
+
+        {/* Display course URL once after all chapters */}
+        {course?.courseId && (
+          <div className="mt-4 p-4 border-t">
+            <h2 className="text-center text-primary border p-2 rounded flex gap-5 items-center">
+              Share Course
+              <HiOutlineClipboardDocumentCheck
+                className="h-5 w-5 cursor-pointer"
+                onClick={async () =>
+                  await navigator.clipboard.writeText(
+                    `https://ai-educator-course-gen.vercel.app/course/${course.courseId}`
+                  )
+                }
+              />
+            </h2>
+          </div>
+        )}
       </div>
+
       {/* Content Div */}
       <div className="md:ml-72">
         <ChapterContent chapter={selectedChapter} content={chapterContent} />
