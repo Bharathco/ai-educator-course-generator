@@ -10,6 +10,7 @@ import {
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Progress } from "@/components/ui/progress";
+import { HiOutlineUserGroup } from "react-icons/hi";
 function Sidebar() {
   const Menu = [
     {
@@ -24,12 +25,13 @@ function Sidebar() {
       icon: <HiOutlineCollection />,
       path: "/dashboard/explore",
     },
-    // {
-    //   id: 3,
-    //   name: "Upgrade",
-    //   icon: <HiOutlineShieldCheck />,
-    //   path: "/dashboard/upgrade",
-    // },
+    {
+      id: 3,
+      name: "About us",
+      icon: <HiOutlineUserGroup />,
+
+      path: "/dashboard/aboutus",
+    },
     // {
     //   id: 4,
     //   name: "Logout",

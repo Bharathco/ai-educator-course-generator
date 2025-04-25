@@ -66,7 +66,9 @@ function Hero() {
 
         <br />
         <HowItWorks />
+        <AboutUs />
         <WhyChooseUs />
+        
         {/* <Footer /> */}
       </div>
     </section>
@@ -117,6 +119,8 @@ function WhyChooseUs() {
     },
   ];
 
+
+
   return (
     <section className="mt-16 bg-gradient-to-b from-white to-[#EAF0FF] py-20">
       <div className="text-center px-6 max-w-6xl mx-auto">
@@ -150,6 +154,73 @@ function WhyChooseUs() {
   );
 }
 
+// 🌟 About Us Section
+
+function AboutUs() {
+  const team = [
+    {
+      name: "Bharath Rajashekar",
+      email: "bharath.rajashekar3@gmail.com",
+      role: "Student, 4th Year, B.E",
+      dept: "Computer Science and Design",
+    },
+    {
+      name: "Shankar S",
+      email: "yuvanshankar0715@gmail.com",
+      role: "Student, 4th Year, B.E",
+      dept: "Computer Science and Design",
+    },
+    {
+      name: "Tanush Reddy K",
+      email: "k.tanush2003@gmail.com",
+      role: "Student, 4th Year, B.E",
+      dept: "Computer Science and Design",
+    },
+    {
+      name: "Kusuma H",
+      email: "kusumarathna666@gmail.com",
+      role: "Student, 4th Year, B.E",
+      dept: "Computer Science and Design",
+    },
+  ];
+
+  return (
+    <section className="mt-20 bg-white py-16">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
+          About Us
+        </h2>
+        <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+          We are a passionate team of final-year engineering students from
+          Dayananda Sagar Academy of Technology and Management (DSATM),
+          Bengaluru. Our mission is to revolutionize learning and job
+          preparation through smart, AI-powered tools for students, educators,
+          and job seekers.
+        </p>
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left">
+          {team.map((member, index) => (
+            <TeamCard key={index} {...member} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TeamCard({ name, role, dept, email }) {
+  return (
+    <div className="bg-[#F9FAFB] rounded-xl shadow-md p-5 border border-gray-200 hover:shadow-lg transition">
+      <h3 className="text-lg font-bold text-gray-800">{name}</h3>
+      <p className="text-sm text-gray-600 mt-1">{role}</p>
+      <p className="text-sm text-gray-600">{dept}</p>
+      <p className="text-xs text-blue-600 mt-2 truncate">{email}</p>
+    </div>
+  );
+}
+
+
+  
 // 👇 Footer Component
 
 export default Hero;
