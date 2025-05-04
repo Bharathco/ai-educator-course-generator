@@ -66,7 +66,7 @@ function Hero() {
 
         <br />
         <HowItWorks />
-        <AboutUs />
+        {/* <AboutUs /> */}
         <WhyChooseUs />
         
         {/* <Footer /> */}
